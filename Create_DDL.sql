@@ -1,4 +1,4 @@
---1. Создание таблицы "Salary"
+--1. Создание таблицы "Salary".
 
 create table salary(
 	id serial primary key,
