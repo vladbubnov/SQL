@@ -1,26 +1,26 @@
---1. Создание таблицы "Salary".
+--1. РЎРѕР·РґР°РЅРёРµ С‚Р°Р±Р»РёС†С‹ "Salary".
 
 create table salary(
 	id serial primary key,
 	monthly_salary int not null
 );
 
---2. Вывести содержимое таблицы
+--2. Р’С‹РІРµСЃС‚Рё СЃРѕРґРµСЂР¶РёРјРѕРµ С‚Р°Р±Р»РёС†С‹
 
 select * from salary;
 
---3. Созать таблицу "Roles"
+--3. РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ "Roles"
 
 create table roles(
 	id serial primary key,
 	role_title varchar(30) unique not null
 );
 
---4. Вывести содержимое таблицы "Roles"
+--4. Р’С‹РІРµСЃС‚Рё СЃРѕРґРµСЂР¶РёРјРѕРµ С‚Р°Р±Р»РёС†С‹ "Roles"
 
 select * from roles;
 
---5. Создать таблицу "Salary_roles"
+--5. РЎРѕР·РґР°С‚СЊ С‚Р°Р±Р»РёС†Сѓ "Salary_roles"
 
 create table salary_roles (
 	id serial primary key, 
@@ -32,11 +32,11 @@ create table salary_roles (
 		references salary(id)
 );
 
---6. Вывести содержимое таблицы "Roles"
+--6. Р’С‹РІРµСЃС‚Рё СЃРѕРґРµСЂР¶РёРјРѕРµ С‚Р°Р±Р»РёС†С‹ "Roles"
 
 select * from salary_roles;
 
---7. Внести данные в таблицу Salary
+--7. Р’РЅРµСЃС‚Рё РґР°РЅРЅС‹Рµ РІ С‚Р°Р±Р»РёС†Сѓ Salary
 
 insert into salary(monthly_salary)  
 values (1200),
@@ -49,7 +49,7 @@ values (1200),
        (1800),
        (5000);
 
---8. Внести данные в таблицу Roles
+--8. Р’РЅРµСЃС‚Рё РґР°РЅРЅС‹Рµ РІ С‚Р°Р±Р»РёС†Сѓ Roles
       
 insert into roles(role_title)  
 values ('QA_manual_junior'),
@@ -68,7 +68,7 @@ values ('QA_manual_junior'),
        ('Designer'),
        ('Manager');
       
---9. Внести данные в таблицу salary_roles
+--9. Р’РЅРµСЃС‚Рё РґР°РЅРЅС‹Рµ РІ С‚Р°Р±Р»РёС†Сѓ salary_roles
 
 insert into salary_roles(id_role, id_salary)  
 values (1, 1),
