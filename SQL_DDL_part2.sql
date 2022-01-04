@@ -145,7 +145,7 @@ select employee_name, role_name, monthly_salary
 from employees e 
 left join roles_employee re on e.id = re.employee_id 
 left join roles r on re.role_id = r.id 
-left join employee_salary es on re.employee_id = es.employee_id 
+left join employee_salary es on e.id = re.employee_id
 left join salary s on es.salary_id = s.id
 where role_name like 'Junoir Python developer';
 -- Junior Python developer отсутствуют
